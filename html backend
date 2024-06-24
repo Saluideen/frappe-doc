@@ -1,0 +1,28 @@
+		doc = frappe.get_all("demo table", fields=["item", "amount_1", "amount_2"])
+
+		# Start constructing the HTML message
+		message = """
+		<span style='color:red'>This is a demo page</span>
+		<table border="1">
+		<tr>
+			<th>Item</th>
+			<th>Amount 1</th>
+			<th>Amount 2</th>
+		</tr>
+		"""
+
+		# Add rows for each document
+		for row in doc:
+			message += f"""
+			<tr>
+				<td>{row['item']}</td>
+				<td>{row['amount_1']}</td>
+				<td>{row['amount_2']}</td>
+			</tr>
+			"""
+
+		# Close the table tag
+		message += "</table>"
+
+		# Raise the exception with the constructed HTML message
+		frappe.throw(message)
