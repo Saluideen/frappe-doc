@@ -1,3 +1,18 @@
 Clear Child Table
 ----------------
   frm.clear_table("assignment_days");
+
+
+Add Data to child Table
+---------------------
+
+  get_days(label).forEach((day) => frm.add_child("assignment_days", { day: day }));
+			frm.refresh_field("assignment_days");
+
+Add Button 
+---------
+
+  labels.forEach((label) =>
+			frm.fields_dict["assignment_days"].grid.add_custom_button(label, set_days, "top")
+		);
+
