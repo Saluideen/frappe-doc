@@ -1,0 +1,12 @@
+	refresh(frm) {
+        frm.dashboard.clear_comment();
+			frm.dashboard.add_comment(
+				__("Welcome to demo table"),
+				"blue",
+				true
+			);
+
+	},
+
+
+    
