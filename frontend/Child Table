@@ -1,0 +1,3 @@
+Clear Child Table
+----------------
+  frm.clear_table("assignment_days");
