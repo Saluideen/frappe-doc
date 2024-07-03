@@ -1,0 +1,10 @@
+Termius
+
+/opt
+Cd frappe_docker_profond_86
+Cd profond_scripts
+Sudo docker system prune
+Sudo nano build_image.sh
+./build_image.sh
+Sudo nano update_server.sh
+./update_server.sh
